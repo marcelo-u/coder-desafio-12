@@ -1,0 +1,44 @@
+<%- include('./layouts/main') -%>
+  <body>
+    <form
+      action="/api/productos"
+      method="POST"
+      onsubmit="window.location.reload()"
+    >
+      <div class="form-group">
+        <label for="title">Título</label>
+        <input
+          name="title"
+          type="text"
+          class="form-control"
+          id="title"
+          placeholder="Ingrese título"
+        />
+      </div>
+      <div class="form-group">
+        <label for="price">Precio</label>
+        <input
+          name="price"
+          type="number"
+          class="form-control"
+          id="price"
+          placeholder="Ingrese precio"
+        />
+      </div>
+      <div class="form-group">
+        <label for="thumbnail">Imagen</label>
+        <input
+          name="thumbnail"
+          type="url"
+          class="form-control"
+          id="thumbnail"
+          placeholder="Ingrese url"
+        />
+      </div>
+      <div class="form-check">
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </div>
+    </form>
+    <%- include('./partials/input-productos') -%>
+  </body>
+</html>
